@@ -22,7 +22,33 @@
   },
   "channels": {
     "stable": {
-      "pluginVersion": "0.1.1"
+      "pluginVersion": "0.1.1",
+      "manifest": {
+        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-zcode-v0.1.1/gian-proxy-zcode-0.1.1-darwin-arm64.tar.gz.manifest.json",
+        "sha256": "41d15779e050f3cbb50d8066d1cb6cb38e735dbf7221a75094cc4c0e1a7b3c00",
+        "size": 801
+      },
+      "artifacts": {
+        "darwin-arm64": {
+          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-zcode-v0.1.1/gian-proxy-zcode-0.1.1-darwin-arm64.tar.gz",
+          "sha256": "fe1f1c6ba28d128c26bde6f49923faa9857601d5517caa23c5951f70243babe9",
+          "size": 30184
+        }
+      },
+      "combination": {
+        "generationId": "zcode-0.1.1-runtime-0.16.5",
+        "certificate": {
+          "id": "artifacts-872cfc36de26d1d424aa7c2cf7b915eae9172499-34748512024-1",
+          "sha256": "2df1eb4fb5deada516be3dcd1b711fa8edd21f003de2b1d87f31709c03c2d6b8"
+        },
+        "runtime": {
+          "kind": "external-app",
+          "runtimeId": "zcode",
+          "version": "0.16.5",
+          "artifactSha256": "e9f1868c0fdb863537ed910ee3828b9be96b8c2fd805473f63b439e1113266b8"
+        },
+        "companions": []
+      }
     }
   }
 }

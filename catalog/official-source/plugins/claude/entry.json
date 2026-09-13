@@ -22,7 +22,39 @@
   },
   "channels": {
     "stable": {
-      "pluginVersion": "0.2.4"
+      "pluginVersion": "0.2.4",
+      "manifest": {
+        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-claude-v0.2.4/gian-proxy-claude-0.2.4-darwin-arm64.tar.gz.manifest.json",
+        "sha256": "97aa83c41d699d9287f635316a5f21d53c63587fd9395bd2f1f955d39abf38e6",
+        "size": 799
+      },
+      "artifacts": {
+        "darwin-arm64": {
+          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-claude-v0.2.4/gian-proxy-claude-0.2.4-darwin-arm64.tar.gz",
+          "sha256": "cbecd64e77a661d3fd9a6233fda898ff972cd9a9bb65571aaf8978403fe82b5b",
+          "size": 510915
+        }
+      },
+      "combination": {
+        "generationId": "claude-0.2.4-runtime-2.1.159",
+        "certificate": {
+          "id": "artifacts-872cfc36de26d1d424aa7c2cf7b915eae9172499-34748512024-1",
+          "sha256": "2df1eb4fb5deada516be3dcd1b711fa8edd21f003de2b1d87f31709c03c2d6b8"
+        },
+        "runtime": {
+          "kind": "native-binary",
+          "runtimeId": "claude",
+          "version": "2.1.159",
+          "asset": {
+            "url": "https://downloads.claude.ai/claude-code-releases/2.1.159/darwin-arm64/claude",
+            "sha256": "5adf7b4d349f743d669cd5adf2ce76dbb5e146d8ab99b3a63c5aef2ef15595f9",
+            "size": 215250336
+          },
+          "format": "raw",
+          "entryRelativePath": "bin/claude"
+        },
+        "companions": []
+      }
     }
   }
 }

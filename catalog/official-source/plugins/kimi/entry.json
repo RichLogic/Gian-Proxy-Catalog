@@ -22,7 +22,39 @@
   },
   "channels": {
     "stable": {
-      "pluginVersion": "0.2.10"
+      "pluginVersion": "0.2.10",
+      "manifest": {
+        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-kimi-v0.2.10/gian-proxy-kimi-0.2.10-darwin-arm64.tar.gz.manifest.json",
+        "sha256": "570475991e35d57857772f3ce533e2e9a5e96f235584c0bd28661afde764004f",
+        "size": 790
+      },
+      "artifacts": {
+        "darwin-arm64": {
+          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-kimi-v0.2.10/gian-proxy-kimi-0.2.10-darwin-arm64.tar.gz",
+          "sha256": "1f7d31dd67e1e3dd39809ecc526d6983c947fe2ee34f18ee4e8d5d32aa1dabfe",
+          "size": 177534
+        }
+      },
+      "combination": {
+        "generationId": "kimi-0.2.10-runtime-0.41.0",
+        "certificate": {
+          "id": "artifacts-872cfc36de26d1d424aa7c2cf7b915eae9172499-34748512024-1",
+          "sha256": "2df1eb4fb5deada516be3dcd1b711fa8edd21f003de2b1d87f31709c03c2d6b8"
+        },
+        "runtime": {
+          "kind": "native-binary",
+          "runtimeId": "kimi",
+          "version": "0.41.0",
+          "asset": {
+            "url": "https://github.com/MoonshotAI/kimi-code/releases/download/%40moonshot-ai/kimi-code%400.41.0/kimi-code-darwin-arm64.tar.gz",
+            "sha256": "8d3dd7dde4b2a3cbd0993fb677c96665dcb6b93ac8cf0fff80ab20a7539024e9",
+            "size": 60450550
+          },
+          "format": "tar.gz",
+          "entryRelativePath": "kimi"
+        },
+        "companions": []
+      }
     }
   }
 }

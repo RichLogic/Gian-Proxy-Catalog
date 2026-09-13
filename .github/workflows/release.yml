@@ -91,19 +91,18 @@ jobs:
             --bundle "${GITHUB_WORKSPACE}/output/catalog-release/bundle" \
             --output "${GITHUB_WORKSPACE}/output/catalog-release/assets"
 
-      - name: Create immutable Catalog tag
+      - name: Require authorized immutable Catalog tag
         env:
           SEQUENCE: ${{ inputs.sequence }}
         run: |
           TAG="catalog-v1.${SEQUENCE}.0"
           if git ls-remote --exit-code --tags origin "refs/tags/${TAG}" >/dev/null 2>&1; then
-            echo "Catalog tag already exists: ${TAG}" >&2
+            git fetch origin "refs/tags/${TAG}:refs/tags/${TAG}"
+            test "$(git rev-list -n 1 "${TAG}")" = "${GITHUB_SHA}"
+          else
+            echo "::error::An authorized maintainer must create ${TAG} at ${GITHUB_SHA}."
             exit 1
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git tag -a "${TAG}" "${GITHUB_SHA}" -m "Signed Gian Catalog ${TAG}"
-          git push origin "refs/tags/${TAG}"
 
       - name: Publish immutable Catalog assets
         env:
@@ -111,9 +110,38 @@ jobs:
           SEQUENCE: ${{ inputs.sequence }}
         run: |
           TAG="catalog-v1.${SEQUENCE}.0"
-          gh release create "${TAG}" \
-            output/catalog-release/assets/* \
-            --verify-tag \
-            --latest \
-            --title "Gian Catalog ${TAG}" \
-            --notes "Signed immutable Gian Proxy and Runtime Catalog."
+          RELEASE_ASSETS=(output/catalog-release/assets/*)
+          validate_existing_release() {
+            local release_json path name expected_size expected_digest
+            release_json="$(gh release view "${TAG}" --json tagName,isDraft,isPrerelease,assets 2>/dev/null)" || return 1
+            test "$(jq -r '.tagName' <<<"${release_json}")" = "${TAG}" || return 1
+            test "$(jq -r '.isDraft' <<<"${release_json}")" = false || return 1
+            test "$(jq -r '.isPrerelease' <<<"${release_json}")" = false || return 1
+            test "$(jq '.assets | length' <<<"${release_json}")" -eq "${#RELEASE_ASSETS[@]}" || return 1
+            for path in "${RELEASE_ASSETS[@]}"; do
+              name="${path##*/}"
+              expected_size="$(stat -c '%s' "${path}")"
+              expected_digest="sha256:$(sha256sum "${path}" | awk '{print $1}')"
+              jq -e \
+                --arg name "${name}" \
+                --argjson size "${expected_size}" \
+                --arg digest "${expected_digest}" \
+                '[.assets[] | select(.name == $name and .size == $size and .digest == $digest)] | length == 1' \
+                <<<"${release_json}" >/dev/null || return 1
+            done
+          }
+          if validate_existing_release; then exit 0; fi
+          for ATTEMPT in 1 2 3; do
+            if gh release create "${TAG}" \
+              "${RELEASE_ASSETS[@]}" \
+              --verify-tag \
+              --latest \
+              --title "Gian Catalog ${TAG}" \
+              --notes "Signed immutable Gian Proxy and Runtime Catalog."; then
+              validate_existing_release
+              exit $?
+            fi
+            if validate_existing_release; then exit 0; fi
+            if [ "${ATTEMPT}" -eq 3 ]; then exit 1; fi
+            sleep $((ATTEMPT * 5))
+          done
