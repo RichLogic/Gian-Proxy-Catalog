@@ -22,33 +22,33 @@
   },
   "channels": {
     "stable": {
-      "pluginVersion": "0.2.15",
+      "pluginVersion": "0.2.16",
       "manifest": {
-        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-codex-v0.2.15/gian-proxy-codex-0.2.15-darwin-arm64.tar.gz.manifest.json",
-        "sha256": "c73c0a86826a67e7d2305ffddace81bc3785735d68ae7aeee6c46baec9da5edb",
+        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-codex-v0.2.16/gian-proxy-codex-0.2.16-darwin-arm64.tar.gz.manifest.json",
+        "sha256": "8d8baf01058f1448f68841419078da27b7b685f35a930a9ca2aea30355ac1156",
         "size": 979
       },
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-codex-v0.2.15/gian-proxy-codex-0.2.15-darwin-arm64.tar.gz",
-          "sha256": "05c182e770b746c6f1890771878a25808b037d5898a637d2762c7686cdebc147",
-          "size": 186986
+          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-codex-v0.2.16/gian-proxy-codex-0.2.16-darwin-arm64.tar.gz",
+          "sha256": "53a32cdbf99d623cd4353445b85b8df2979b294fea9455be54f925ea742963af",
+          "size": 186989
         }
       },
       "combination": {
-        "generationId": "codex-0.2.15-runtime-0.146.0",
+        "generationId": "codex-0.2.16-runtime-0.153.4",
         "certificate": {
-          "id": "artifacts-872cfc36de26d1d424aa7c2cf7b915eae9172499-34748512024-1",
-          "sha256": "2df1eb4fb5deada516be3dcd1b711fa8edd21f003de2b1d87f31709c03c2d6b8"
+          "id": "artifacts-a30d42a33d7665f2f809841a99d643a0459b63a1-34802901424-1",
+          "sha256": "2183e6f8bd3e430fccfcd10517b2bfbaa409434aafb688625f04585ee4776c74"
         },
         "runtime": {
           "kind": "native-binary",
           "runtimeId": "codex",
-          "version": "0.146.0",
+          "version": "0.153.4",
           "asset": {
-            "url": "https://github.com/openai/codex/releases/download/rust-v0.146.0/codex-package-aarch64-apple-darwin.tar.gz",
-            "sha256": "cd961b480f6dfc4703bd244601f1927231fa31a587cb9046ccdffa6c4c29e7d5",
-            "size": 121348006
+            "url": "https://github.com/openai/codex/releases/download/rust-v0.153.4/codex-package-aarch64-apple-darwin.tar.gz",
+            "sha256": "35438da1fbf7a6db7ddb3bcec84448fa6015ba188461472a97d9d1da7d9c4353",
+            "size": 111554884
           },
           "format": "tar.gz",
           "entryRelativePath": "bin/codex"
