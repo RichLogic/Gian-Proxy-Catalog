@@ -22,24 +22,24 @@
   },
   "channels": {
     "stable": {
-      "pluginVersion": "0.2.4",
+      "pluginVersion": "0.2.5",
       "manifest": {
-        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-claude-v0.2.4/gian-proxy-claude-0.2.4-darwin-arm64.tar.gz.manifest.json",
-        "sha256": "97aa83c41d699d9287f635316a5f21d53c63587fd9395bd2f1f955d39abf38e6",
+        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-claude-v0.2.5/gian-proxy-claude-0.2.5-darwin-arm64.tar.gz.manifest.json",
+        "sha256": "001b759ade0f9a5bfe3181aeb1e8cedd15a9d759a85f2e5aed13904bfb627b57",
         "size": 799
       },
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-claude-v0.2.4/gian-proxy-claude-0.2.4-darwin-arm64.tar.gz",
-          "sha256": "cbecd64e77a661d3fd9a6233fda898ff972cd9a9bb65571aaf8978403fe82b5b",
-          "size": 510915
+          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-claude-v0.2.5/gian-proxy-claude-0.2.5-darwin-arm64.tar.gz",
+          "sha256": "6c1c3fe5440a41bfb46b3677dd00c59b2b31cbc15f09097380dee780ee108c83",
+          "size": 510914
         }
       },
       "combination": {
-        "generationId": "claude-0.2.4-runtime-2.1.159",
+        "generationId": "claude-0.2.5-runtime-2.1.159",
         "certificate": {
-          "id": "artifacts-872cfc36de26d1d424aa7c2cf7b915eae9172499-34748512024-1",
-          "sha256": "2df1eb4fb5deada516be3dcd1b711fa8edd21f003de2b1d87f31709c03c2d6b8"
+          "id": "artifacts-1f4564b8c79f358ac384fe55521839e7026e7003-34933533620-1",
+          "sha256": "e6aaf5837620a2a37c36d2c0c6bcd4423a72e6ef674217981543da6a46d6ad9b"
         },
         "runtime": {
           "kind": "native-binary",
