@@ -22,24 +22,24 @@
   },
   "channels": {
     "stable": {
-      "pluginVersion": "0.2.16",
+      "pluginVersion": "0.3.0",
       "manifest": {
-        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-codex-v0.2.16/gian-proxy-codex-0.2.16-darwin-arm64.tar.gz.manifest.json",
-        "sha256": "8d8baf01058f1448f68841419078da27b7b685f35a930a9ca2aea30355ac1156",
-        "size": 979
+        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-codex-v0.3.0/gian-proxy-codex-0.3.0-darwin-arm64.tar.gz.manifest.json",
+        "sha256": "a8aeb44fb371f423a730a386c83ce3dacb9e502c642d42a483339b3bb66053f1",
+        "size": 978
       },
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-codex-v0.2.16/gian-proxy-codex-0.2.16-darwin-arm64.tar.gz",
-          "sha256": "53a32cdbf99d623cd4353445b85b8df2979b294fea9455be54f925ea742963af",
-          "size": 186989
+          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-codex-v0.3.0/gian-proxy-codex-0.3.0-darwin-arm64.tar.gz",
+          "sha256": "0943a1ea8555b9891b4374b29542d8e1359436c751ad4f2965f100c4d21668ce",
+          "size": 189285
         }
       },
       "combination": {
-        "generationId": "codex-0.2.16-runtime-0.153.4",
+        "generationId": "codex-0.3.0-runtime-0.153.4",
         "certificate": {
-          "id": "artifacts-a30d42a33d7665f2f809841a99d643a0459b63a1-34802901424-1",
-          "sha256": "2183e6f8bd3e430fccfcd10517b2bfbaa409434aafb688625f04585ee4776c74"
+          "id": "artifacts-2af90801d46fb9a40ad0423c157eb5aa474ff521-35051506421-1",
+          "sha256": "059c9b15248b6c244f781bd11473e0fc3007aa75512753e2a1d34b1d7600223a"
         },
         "runtime": {
           "kind": "native-binary",
