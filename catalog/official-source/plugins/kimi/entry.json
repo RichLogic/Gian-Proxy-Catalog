@@ -22,24 +22,24 @@
   },
   "channels": {
     "stable": {
-      "pluginVersion": "0.3.0",
+      "pluginVersion": "0.3.1",
       "manifest": {
-        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-kimi-v0.3.0/gian-proxy-kimi-0.3.0-darwin-arm64.tar.gz.manifest.json",
-        "sha256": "d36d1d8a6c6fffad7216bfd1c5f2ff14e6ca25c4de3cc6dc7382ba78499f8757",
+        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-kimi-v0.3.1/gian-proxy-kimi-0.3.1-darwin-arm64.tar.gz.manifest.json",
+        "sha256": "12d884c14c4ab4e35c5aa25c0cedbafd1e33824b2ca1e3742d45c67bce1ef89a",
         "size": 789
       },
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-kimi-v0.3.0/gian-proxy-kimi-0.3.0-darwin-arm64.tar.gz",
-          "sha256": "8ae96e39af0b0ef3b0fcc97a881d8efaa17fc15b6b38161b11b215a5ca09cb85",
-          "size": 179415
+          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-kimi-v0.3.1/gian-proxy-kimi-0.3.1-darwin-arm64.tar.gz",
+          "sha256": "931a3a405f72aa2ab3dd158ae5456e7b08e9a35a80968a4a36c6fd6c5b61a30d",
+          "size": 179635
         }
       },
       "combination": {
-        "generationId": "kimi-0.3.0-runtime-0.41.0",
+        "generationId": "kimi-0.3.1-runtime-0.41.0",
         "certificate": {
-          "id": "artifacts-2af90801d46fb9a40ad0423c157eb5aa474ff521-35051506421-1",
-          "sha256": "059c9b15248b6c244f781bd11473e0fc3007aa75512753e2a1d34b1d7600223a"
+          "id": "artifacts-de2768ce00d1f5b3867ca922b052569c5c672da4-35161302249-1",
+          "sha256": "2d6c9f34ab66e8ad25087513d36d793bcea323420d44041f52ab18c5b983ec9a"
         },
         "runtime": {
           "kind": "native-binary",

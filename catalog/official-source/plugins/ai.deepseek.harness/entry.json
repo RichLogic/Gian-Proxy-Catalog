@@ -22,31 +22,31 @@
   },
   "channels": {
     "stable": {
-      "pluginVersion": "0.3.0",
+      "pluginVersion": "0.3.1",
       "manifest": {
-        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-dsh-v0.3.0/gian-proxy-dsh-0.3.0-darwin-arm64.tar.gz.manifest.json",
-        "sha256": "6526a5c6f3eb50d9170b1840c347f16b1b9e60015984f84e7d65ed7958d9f4a7",
-        "size": 821
+        "url": "https://github.com/RichLogic/Gian/releases/download/proxy-dsh-v0.3.1/gian-proxy-dsh-0.3.1-darwin-arm64.tar.gz.manifest.json",
+        "sha256": "5c465b4afb5beed72f6800e7045502200af094c212196fb5f90996ee76fece4d",
+        "size": 834
       },
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-dsh-v0.3.0/gian-proxy-dsh-0.3.0-darwin-arm64.tar.gz",
-          "sha256": "378f07b3753a09c937977727d654a8861f2c48accadaf5accecb5fb4bcc7d340",
-          "size": 123038
+          "url": "https://github.com/RichLogic/Gian/releases/download/proxy-dsh-v0.3.1/gian-proxy-dsh-0.3.1-darwin-arm64.tar.gz",
+          "sha256": "a9d3002a976a1faa23d51602c51956809b5705f2a5fdd29eda6384d0a4a579fd",
+          "size": 123077
         }
       },
       "combination": {
-        "generationId": "dsh-0.3.0-runtime-0.1.1-rc.2",
+        "generationId": "dsh-0.3.1-runtime-0.1.1-rc.2",
         "certificate": {
-          "id": "artifacts-2af90801d46fb9a40ad0423c157eb5aa474ff521-35051506421-1",
-          "sha256": "059c9b15248b6c244f781bd11473e0fc3007aa75512753e2a1d34b1d7600223a"
+          "id": "artifacts-de2768ce00d1f5b3867ca922b052569c5c672da4-35161302249-1",
+          "sha256": "2d6c9f34ab66e8ad25087513d36d793bcea323420d44041f52ab18c5b983ec9a"
         },
         "runtime": {
           "kind": "native-binary",
-          "runtimeId": "dsh",
+          "runtimeId": "deepseek-harness",
           "version": "0.1.1-rc.2",
           "asset": {
-            "url": "https://github.com/RichLogic/Gian/releases/download/proxy-dsh-v0.3.0/gian-runtime-dsh-0.1.1-rc.2-darwin-arm64.tar.gz",
+            "url": "https://github.com/RichLogic/Gian/releases/download/proxy-dsh-v0.3.1/gian-runtime-dsh-0.1.1-rc.2-darwin-arm64.tar.gz",
             "sha256": "0456ae6605862f840379dec22766e4aa73221c5fb9abf92375d6fd630fe40ec3",
             "size": 45137691
           },
