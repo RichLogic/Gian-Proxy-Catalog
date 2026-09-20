@@ -16,7 +16,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install the pinned encryption library without any secret in the environment
-        run: python -m pip install --disable-pip-version-check --no-input --only-binary=:all: PyNaCl==1.6.2
+        run: |
+          python -m pip install --disable-pip-version-check --no-input --only-binary=:all: PyNaCl==1.6.2
       - name: Validate the existing signer and seal only for the pinned destination environment
         env:
           GIAN_CATALOG_SIGNING_KEY_PEM: ${{ secrets.GIAN_CATALOG_SIGNING_KEY_PEM }}
